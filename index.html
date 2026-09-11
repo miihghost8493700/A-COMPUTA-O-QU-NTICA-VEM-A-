@@ -6,123 +6,167 @@
 
     <title>A Computação Quântica Vem Aí!</title>
 
-    <!-- Fonte parecida com escrita à mão -->
+    <!-- Fonte manuscrita -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            padding: 40px 15px;
-            background: #d9d9d9;
-            font-family: "Caveat", "Segoe Print", "Comic Sans MS", cursive;
+            padding: 35px 15px;
+            background: #d8d8d8;
+            font-family: "Caveat", "Segoe Print", cursive;
         }
 
-        /* Folha do caderno */
+        /* =========================
+           FOLHA
+        ========================= */
+
         .folha {
-            position: relative;
             width: 100%;
             max-width: 850px;
+            min-height: 1150px;
             margin: auto;
-            padding: 45px 55px 70px 55px;
+
+            padding: 30px 55px 70px 55px;
 
             background-color: #fff;
-            
-            /* Linhas horizontais pretas */
+
+            /*
+              Linhas de caderno.
+              Agora estão bem mais claras.
+            */
             background-image: repeating-linear-gradient(
                 to bottom,
                 transparent 0px,
                 transparent 34px,
-                #222 35px,
+                rgba(80, 80, 80, 0.25) 35px,
                 transparent 36px
             );
 
             background-size: 100% 36px;
 
-            min-height: 1100px;
-
             box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.25);
+                0 4px 18px rgba(0, 0, 0, 0.20);
 
-            border-radius: 3px;
+            border-radius: 2px;
         }
 
-        /* Pequeno efeito de folha */
-        .folha::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 18px;
-            background: rgba(0, 0, 0, 0.025);
-        }
+        /* =========================
+           TÍTULO
+        ========================= */
 
-        /* Título */
         h1 {
-            margin: 0 0 5px 0;
-            font-size: 34px;
-            font-weight: 600;
+            margin: 0;
+            padding: 0;
+
+            font-size: 32px;
             line-height: 36px;
-            color: #222;
+
+            font-weight: 600;
+            color: #333;
+
+            letter-spacing: 0.2px;
         }
 
-        /* Texto */
-        p {
+        /* =========================
+           TEXTO
+        ========================= */
+
+        .texto {
             margin: 0;
+            padding: 0;
+
             font-size: 24px;
             line-height: 36px;
+
             font-weight: 500;
-            color: #252525;
-            text-align: left;
+
+            color: #303030;
+
+            /*
+              Mantém a escrita alinhada
+              com as linhas do caderno.
+            */
+            position: relative;
         }
 
-        .paragrafo {
-            margin-bottom: 2px;
-        }
-
-        /* Espaçamento da parte de atividades */
-        .atividade {
-            margin-top: 5px;
-        }
-
-        .atividade h2 {
-            margin: 0;
-            font-size: 27px;
-            line-height: 36px;
-            font-weight: 600;
-        }
-
-        .questao {
+        /* Primeiro parágrafo */
+        .p1 {
             margin-top: 0;
         }
 
-        /* Destaque dos números das questões */
+        /* Segundo parágrafo */
+        .p2 {
+            margin-top: 0;
+        }
+
+        /* =========================
+           ATIVIDADE
+        ========================= */
+
+        .atividade {
+            text-align: center;
+
+            margin: 0;
+            padding: 0;
+
+            font-size: 27px;
+            line-height: 36px;
+
+            font-weight: 600;
+            color: #303030;
+        }
+
+        /* =========================
+           QUESTÕES
+        ========================= */
+
+        .questao {
+            margin: 0;
+            padding: 0;
+
+            font-size: 24px;
+            line-height: 36px;
+
+            font-weight: 500;
+
+            color: #303030;
+
+            text-align: left;
+        }
+
         .numero {
             font-weight: 600;
         }
 
-        /* Responsividade */
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
         @media (max-width: 600px) {
 
             body {
-                padding: 15px 5px;
+                padding: 12px 5px;
             }
 
             .folha {
-                padding: 30px 25px 50px 25px;
                 min-height: 1000px;
+
+                padding: 25px 25px 60px 25px;
 
                 background-image: repeating-linear-gradient(
                     to bottom,
                     transparent 0px,
                     transparent 31px,
-                    #222 32px,
+                    rgba(80, 80, 80, 0.25) 32px,
                     transparent 33px
                 );
 
@@ -130,50 +174,70 @@
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 27px;
                 line-height: 33px;
             }
 
-            p {
+            .texto,
+            .questao {
                 font-size: 20px;
                 line-height: 33px;
             }
 
-            .atividade h2 {
+            .atividade {
                 font-size: 24px;
                 line-height: 33px;
             }
         }
+
     </style>
 </head>
+
 
 <body>
 
     <div class="folha">
 
+        <!-- TÍTULO -->
+
         <h1>A COMPUTAÇÃO QUÂNTICA VEM AÍ!</h1>
 
-        <p class="paragrafo">
+
+        <!-- PRIMEIRO PARÁGRAFO -->
+
+        <p class="texto p1">
             A computação quântica é uma tecnologia diferente dos computadores tradicionais, pois consegue trabalhar com várias possibilidades de informação ao mesmo tempo. Por isso, ela pode ter uma capacidade de processamento muito maior e realizar cálculos que seriam muito difíceis para os computadores comuns.
         </p>
 
-        <p class="paragrafo">
+
+        <!-- SEGUNDO PARÁGRAFO -->
+
+        <p class="texto p2">
             Essa tecnologia pode ser muito importante para a ciência e química, ajudando a estudar reações químicas complexas e desenvolver novos medicamentos. No futuro, os computadores quânticos também poderão ajudar a encontrar soluções para problemas que ainda não conseguimos resolver com computadores atuais.
         </p>
 
+
+        <!-- ATIVIDADE -->
+
         <div class="atividade">
-
-            <h2>Atividade</h2>
-
-            <p class="questao">
-                <span class="numero">1-</span> Qual é a importância da capacidade de processamento simultâneo de um computador quântico para estudar reações químicas complexas? Ele permite analisar várias possibilidades de reações ao mesmo tempo, facilitando o estudo de reações químicas complexas e tornando os cálculos mais rápidos.
-            </p>
-
-            <p class="questao">
-                <span class="numero">2-</span> Como os computadores quânticos podem impactar na resolução de problemas que nós ainda não conhecemos? Eles podem ajudar a resolver problemas muito difíceis que os computadores comuns não conseguem resolver, trazendo novas descobertas e soluções para a ciência e tecnologia.
-            </p>
-
+            Atividade
         </div>
+
+
+        <!-- QUESTÃO 1 -->
+
+        <p class="questao">
+            <span class="numero">1-</span>
+            Qual é a importância da capacidade de processamento simultâneo de um computador quântico para estudar reações químicas complexas? Ele permite analisar várias possibilidades de reações ao mesmo tempo, facilitando o estudo de reações químicas complexas e tornando os cálculos mais rápidos.
+        </p>
+
+
+        <!-- QUESTÃO 2 -->
+
+        <p class="questao">
+            <span class="numero">2-</span>
+            Como os computadores quânticos podem impactar na resolução de problemas que nós ainda não conhecemos? Eles podem ajudar a resolver problemas muito difíceis que os computadores comuns não conseguem resolver, trazendo novas descobertas e soluções para a ciência e tecnologia.
+        </p>
 
     </div>
 
