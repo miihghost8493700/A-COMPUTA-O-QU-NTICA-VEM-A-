@@ -6,9 +6,9 @@
 
     <title>A Computação Quântica Vem Aí!</title>
 
-    <!-- Fonte manuscrita -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
@@ -21,32 +21,31 @@
             margin: 0;
             padding: 35px 15px;
             background: #d8d8d8;
+
             font-family: "Caveat", "Segoe Print", cursive;
         }
 
         /* =========================
-           FOLHA
+           FOLHA DO CADERNO
         ========================= */
 
         .folha {
             width: 100%;
             max-width: 850px;
             min-height: 1150px;
+
             margin: auto;
 
             padding: 30px 55px 70px 55px;
 
-            background-color: #fff;
+            background-color: white;
 
-            /*
-              Linhas de caderno.
-              Agora estão bem mais claras.
-            */
+            /* LINHAS CLARAS */
             background-image: repeating-linear-gradient(
                 to bottom,
                 transparent 0px,
                 transparent 34px,
-                rgba(80, 80, 80, 0.25) 35px,
+                rgba(70, 70, 70, 0.22) 35px,
                 transparent 36px
             );
 
@@ -58,22 +57,24 @@
             border-radius: 2px;
         }
 
+
         /* =========================
            TÍTULO
         ========================= */
 
         h1 {
             margin: 0;
-            padding: 0;
 
             font-size: 32px;
             line-height: 36px;
 
             font-weight: 600;
-            color: #333;
 
-            letter-spacing: 0.2px;
+            color: #303030;
+
+            text-align: left;
         }
+
 
         /* =========================
            TEXTO
@@ -81,7 +82,6 @@
 
         .texto {
             margin: 0;
-            padding: 0;
 
             font-size: 24px;
             line-height: 36px;
@@ -91,38 +91,32 @@
             color: #303030;
 
             /*
-              Mantém a escrita alinhada
-              com as linhas do caderno.
-            */
-            position: relative;
+             * Faz o texto ocupar
+             * toda a largura da linha.
+             */
+            text-align: justify;
+
+            text-justify: inter-word;
         }
 
-        /* Primeiro parágrafo */
-        .p1 {
-            margin-top: 0;
-        }
-
-        /* Segundo parágrafo */
-        .p2 {
-            margin-top: 0;
-        }
 
         /* =========================
            ATIVIDADE
         ========================= */
 
         .atividade {
-            text-align: center;
-
             margin: 0;
-            padding: 0;
 
             font-size: 27px;
             line-height: 36px;
 
             font-weight: 600;
+
             color: #303030;
+
+            text-align: center;
         }
+
 
         /* =========================
            QUESTÕES
@@ -130,7 +124,6 @@
 
         .questao {
             margin: 0;
-            padding: 0;
 
             font-size: 24px;
             line-height: 36px;
@@ -139,8 +132,11 @@
 
             color: #303030;
 
-            text-align: left;
+            text-align: justify;
+
+            text-justify: inter-word;
         }
+
 
         .numero {
             font-weight: 600;
@@ -148,7 +144,7 @@
 
 
         /* =========================
-           RESPONSIVIDADE
+           CELULAR
         ========================= */
 
         @media (max-width: 600px) {
@@ -166,7 +162,7 @@
                     to bottom,
                     transparent 0px,
                     transparent 31px,
-                    rgba(80, 80, 80, 0.25) 32px,
+                    rgba(70, 70, 70, 0.22) 32px,
                     transparent 33px
                 );
 
@@ -193,7 +189,6 @@
     </style>
 </head>
 
-
 <body>
 
     <div class="folha">
@@ -203,24 +198,21 @@
         <h1>A COMPUTAÇÃO QUÂNTICA VEM AÍ!</h1>
 
 
-        <!-- PRIMEIRO PARÁGRAFO -->
+        <!-- TEXTO -->
 
-        <p class="texto p1">
-             A computação quântica é uma tecnologia diferente dos computadores tradicionais, pois consegue trabalhar com várias possibilidades de informação ao mesmo tempo. Por isso, ela pode ter uma capacidade de processamento muito maior e realizar cálculos que seriam muito difíceis para os computadores comuns.
+        <p class="texto">
+            A computação quântica é uma tecnologia diferente dos computadores tradicionais, pois consegue trabalhar com várias possibilidades de informação ao mesmo tempo. Por isso, ela pode ter uma capacidade de processamento muito maior e realizar cálculos que seriam muito difíceis para os computadores comuns.
         </p>
 
-
-        <!-- SEGUNDO PARÁGRAFO -->
-
-        <p class="texto p2">
-             Essa tecnologia pode ser muito importante para a ciência e química, ajudando a estudar reações químicas complexas e desenvolver novos medicamentos. No futuro, os computadores quânticos também poderão ajudar a encontrar soluções para problemas que ainda não conseguimos resolver com computadores atuais.
+        <p class="texto">
+            Essa tecnologia pode ser muito importante para a ciência e química, ajudando a estudar reações químicas complexas e desenvolver novos medicamentos. No futuro, os computadores quânticos também poderão ajudar a encontrar soluções para problemas que ainda não conseguimos resolver com computadores atuais.
         </p>
 
 
         <!-- ATIVIDADE -->
 
         <div class="atividade">
-            Atividades
+            Atividade
         </div>
 
 
@@ -232,7 +224,6 @@
         </p>
 
 
-        
         <!-- QUESTÃO 2 -->
 
         <p class="questao">
